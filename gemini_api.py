@@ -2,7 +2,7 @@ import requests
 import pdfplumber
 import math
 
-GEMINI_API_KEY = "AIzaSyAUJWlANalizPlnIJkhYQuRWrz6uaHo8kk"
+GEMINI_API_KEY = "AIzaSyBQBABdgWaSX8qqjO9Tc0qcySppaePgu4s"
 MODEL = "models/gemini-2.0-flash"
 ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/{MODEL}:generateContent"
 
@@ -71,4 +71,5 @@ def answer_questions_from_pdf(pdf_path, questions):
             except Exception as e:
                 chunk_answers.append(f"Error: {e}")
         answers.append(chunk_answers[0])
+
     return answers
